@@ -1,18 +1,11 @@
 from gtts import gTTS
 import speech_recognition as sr
-import re
 import time
-import webbrowser
 import random
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import smtplib
 import requests
 from pygame import mixer
-import urllib.request
-import urllib.parse
-import json
-import bs4
 
 
 def talk(audio):
@@ -34,7 +27,7 @@ def myCommand():
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
-        print("TARS is Ready...")
+        print("I am listening...")
         r.pause_threshold = 1
         # wait for a second to let the recognizer adjust the
         # energy threshold based on the surrounding noise level
@@ -54,7 +47,7 @@ def myCommand():
         command = myCommand()
 
     return command
-    
+
 
 def tars(command):
     errors = ["I don't know what you mean", "Excuse me?", "Can you repeat it please?"]
@@ -85,7 +78,7 @@ def tars(command):
         talk(error)
         time.sleep(3)
 
-talk("TARS activated!")
+talk("I D S Project activated!")
 
 # loop to continue executing multiple commands
 while True:
