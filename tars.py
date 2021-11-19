@@ -54,34 +54,18 @@ def myCommand():
         command = myCommand()
 
     return command
-
+    
 
 def tars(command):
     errors = ["I don't know what you mean", "Excuse me?", "Can you repeat it please?"]
     "if statements for executing commands"
 
-    # Search on Google
-    if "open google and search" in command:
-        reg_ex = re.search("open google and search (.*)", command)
-        search_for = command.split("search", 1)[1]
-        print(search_for)
-        url = "https://www.google.com/"
-        if reg_ex:
-            subgoogle = reg_ex.group(1)
-            url = url + "r/" + subgoogle
-        talk("Okay!")
-        driver = webdriver.Firefox(executable_path="/path/to/geckodriver")
-        driver.get("http://www.google.com")
-        search = driver.find_element_by_name("q")
-        search.send_keys(str(search_for))
-        search.send_keys(Keys.RETURN)  # hit return after you enter search text
-
     #  weather forecast in your city (e.g. weather in London)
     # please create and use your own API it is free
-    elif "weather in" in command:
+    if "weather in" in command:
         city = command.split("in", 1)[1]   
         #openweathermap API
-        url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=your_api_key&units=metric'.format(city)
+        url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=6149d074888b082134996aa4787a069a&units=metric'.format(city)
         response = requests.get(url)
         data = response.json()
         #print(data)
@@ -89,7 +73,6 @@ def tars(command):
         round_temp = int(round(temp))
         talk('It is {} degree celcius in {}'.format(round_temp, city))
         time.sleep(3)
-
 
     elif "hello" in command:
         talk("Hello! I am TARS. How can I help you?")
@@ -101,7 +84,6 @@ def tars(command):
         error = random.choice(errors)
         talk(error)
         time.sleep(3)
-
 
 talk("TARS activated!")
 
