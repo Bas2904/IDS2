@@ -5,6 +5,7 @@ import random
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import requests
+import time
 from pygame import mixer
 
 
@@ -73,12 +74,35 @@ def tars(command):
     elif "who are you" in command:
         talk("I am one of four former U.S. Marine Corps tactical robots")
         time.sleep(3)
+    elif "what is life" in command:
+        talk("Life is a beautiful masterpiece created by aliens for fun.")
+        time.sleep(3)
+    elif "Are you hungry" in command:
+        talk("No. Bas 2 point o does not eat.")
+        time.sleep(3)
+    elif "what is time" in command:
+        talk("A spiderweb.")
+        time.sleep(3)
+        
+    elif "what is the time" in command:
+        from datetime import datetime
+        now = datetime.now()  
+        talk ("%s/%s/%s %s:%s:%s" % (now.month,now.day,now.year,now.hour,now.minute,now.second))
+        time.sleep(3)
+    
+    elif "print the time" in command:
+        from time import strftime
+        while True:
+            print (strftime("%m/%d/%Y %H:%M:%S"), end="", flush=True)
+            print("\r", end="", flush=True)
+            time.sleep(1)
+    
     else:
         error = random.choice(errors)
         talk(error)
         time.sleep(3)
 
-talk("I D S Project activated!")
+talk("Bas 2 point O Project activated!")
 
 # loop to continue executing multiple commands
 while True:
