@@ -77,8 +77,8 @@ def tars(command):
     elif "what is life" in command:
         talk("Life is a beautiful masterpiece created by aliens for fun.")
         time.sleep(3)
-    elif "Are you hungry" in command:
-        talk("No. Bas 2 point o does not eat.")
+    elif "are you hungry" in command:
+        talk("No. I do not eat.")
         time.sleep(3)
     elif "what is time" in command:
         talk("A spiderweb.")
@@ -102,7 +102,7 @@ def tars(command):
         talk(error)
         time.sleep(3)
 
-talk("Bas 2 point O Project activated!")
+talk("I D S Project 2.O activated!")
 
 # loop to continue executing multiple commands
 while True:
