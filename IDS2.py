@@ -9,6 +9,9 @@ import time
 from pygame import mixer
 import sys
 
+import logging
+logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
+
 
 def talk(audio):
     "speaks audio passed as argument"
@@ -49,7 +52,6 @@ def myCommand():
         command = myCommand()
 
     return command
-
 
 def tars(command):
     errors = ["I don't know what you mean", "Excuse me?", "Can you repeat it please?"]
@@ -97,16 +99,22 @@ def tars(command):
             print (strftime("%m/%d/%Y %H:%M:%S"), end="", flush=True)
             print("\r", end="", flush=True)
             time.sleep(1)
-    
+
+    elif "goodbye" in command:
+        talk("Bye Bye")
+        time.sleep(3)
+        sys.exit()
+
+
     else:
         error = random.choice(errors)
         talk(error)
         time.sleep(3)
 
 talk("I D S Project 2 point O activated!")
-
+    
 # loop to continue executing multiple commands
 while True:
     time.sleep(4)
     tars(myCommand())
-    
+
