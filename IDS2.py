@@ -7,6 +7,7 @@ from selenium.webdriver.common.keys import Keys
 import requests
 import time
 from pygame import mixer
+import sys
 
 
 def talk(audio):
@@ -102,9 +103,10 @@ def tars(command):
         talk(error)
         time.sleep(3)
 
-talk("I D S Project 2.O activated!")
+talk("I D S Project 2 point O activated!")
 
 # loop to continue executing multiple commands
 while True:
     time.sleep(4)
     tars(myCommand())
+    
