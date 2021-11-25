@@ -61,7 +61,7 @@ def myCommand():
     return command
 
 
-def tars(command):
+def ids(command):
     errors = ["I don't know what you mean",
               "Excuse me?", "Can you repeat it please?"]
     "if statements for executing commands"
@@ -143,4 +143,4 @@ outfile.write("I D S Project 2 point O activated!" + "\n")
 # loop to continue executing multiple commands
 while True:
     time.sleep(4)
-    tars(myCommand())
+    ids(myCommand())
