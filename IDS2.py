@@ -2,8 +2,6 @@ from gtts import gTTS
 import speech_recognition as sr
 import time
 import random
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import requests
 import time
 from pygame import mixer
