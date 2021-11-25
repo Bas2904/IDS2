@@ -87,7 +87,7 @@ def tars(command):
     # Else If statement that listens for keywords, and returns a matching output
     elif "hello" in command:
         talk("Hello! I am I D S 2 point O. How can I help you?")
-        outfile.write("Hello! I am TARS. How can I help you?" + "\n")
+        outfile.write("Hello! I am IDS 2.0. How can I help you?" + "\n")
         time.sleep(3)
 
     elif "who are you" in command:
