@@ -12,6 +12,7 @@ import sys
 import logging
 logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
 
+outfile = open('data.txt', 'w')
 
 def talk(audio):
     "speaks audio passed as argument"
@@ -33,6 +34,7 @@ def myCommand():
 
     with sr.Microphone() as source:
         print("I am listening...")
+        outfile.write("I am listening" + "\n")
         r.pause_threshold = 1
         # wait for a second to let the recognizer adjust the
         # energy threshold based on the surrounding noise level
@@ -40,16 +42,21 @@ def myCommand():
         # listens for the user's input
         audio = r.listen(source)
         print("analyzing...")
+        outfile.write("analyzing..." + "\n")
 
     try:
         command = r.recognize_google(audio).lower()
         print("You said: " + command + "\n")
+        outfile.write("You said: " + command + "\n")
         time.sleep(2)
+
 
     # loop back to continue to listen for commands if unrecognizable speech is received
     except sr.UnknownValueError:
         print("Your last command couldn't be heard")
+        outfile.write("Your last command couldn't be heard" + "\n")
         command = myCommand()
+        outfile.write(command + "\n")
 
     return command
 
@@ -69,28 +76,35 @@ def tars(command):
         temp = data['main']['temp']
         round_temp = int(round(temp))
         talk('It is {} degree celcius in {}'.format(round_temp, city))
+        outfile.write('It is {} degree celcius in {}'.format(round_temp, city) + "\n")
         time.sleep(3)
 
     elif "hello" in command:
-        talk("Hello! I am TARS. How can I help you?")
+        talk("Hello! I am I D S 2 point O. How can I help you?")
+        outfile.write("Hello! I am TARS. How can I help you?" + "\n")
         time.sleep(3)
     elif "who are you" in command:
         talk("I am one of four former U.S. Marine Corps tactical robots")
+        outfile.write("I am one of four former U.S. Marine Corps tactical robots" + "\n")
         time.sleep(3)
     elif "what is life" in command:
         talk("Life is a beautiful masterpiece created by aliens for fun.")
+        outfile.write("Life is a beautiful masterpiece created by aliens for fun." + "\n")
         time.sleep(3)
     elif "are you hungry" in command:
         talk("No. I do not eat.")
+        outfile.write("No. I do not eat." + "\n")
         time.sleep(3)
     elif "what is time" in command:
         talk("A spiderweb.")
+        outfile.write("A spiderweb." + "\n")
         time.sleep(3)
         
     elif "what is the time" in command:
         from datetime import datetime
         now = datetime.now()  
         talk ("%s/%s/%s %s:%s:%s" % (now.month,now.day,now.year,now.hour,now.minute,now.second))
+        outfile.write("%s/%s/%s %s:%s:%s" % (now.month,now.day,now.year,now.hour,now.minute,now.second) + "\n")
         time.sleep(3)
     
     elif "print the time" in command:
@@ -102,6 +116,7 @@ def tars(command):
 
     elif "goodbye" in command:
         talk("Bye Bye")
+        outfile.write("Bye Bye" + "\n")
         time.sleep(3)
         sys.exit()
 
@@ -109,9 +124,11 @@ def tars(command):
     else:
         error = random.choice(errors)
         talk(error)
+        outfile.write(error + "\n")
         time.sleep(3)
 
 talk("I D S Project 2 point O activated!")
+outfile.write("I D S Project 2 point O activated!" + "\n")
     
 # loop to continue executing multiple commands
 while True:
