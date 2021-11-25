@@ -1,0 +1,23 @@
+DEBUG:gtts.tts:text: I D S Project 2 point O activated!
+DEBUG:gtts.tts:tld: com
+DEBUG:gtts.tts:lang: en-uk
+DEBUG:gtts.tts:slow: False
+DEBUG:gtts.tts:lang_check: True
+DEBUG:gtts.tts:pre_processor_funcs: [<function tone_marks at 0x10d643670>, <function end_of_line at 0x10d643f70>, <function abbreviations at 0x10d681040>, <function word_sub at 0x10d6810d0>]
+DEBUG:gtts.tts:tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|\\(|\\]|，|、|—|،|\\)|。|\\[|…|¡|;|‥|：|\\\n|¿', re.IGNORECASE) from: [<function tone_marks at 0x10d6811f0>, <function period_comma at 0x10d681280>, <function colon at 0x10d681310>, <function other_punctuation at 0x10d6813a0>]>
+WARNING:gtts.lang:'en-uk' has been deprecated, falling back to 'en'. This fallback will be removed in a future version.
+DEBUG:gtts.lang:langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'cy': 'Welsh', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'eo': 'Esperanto', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'hy': 'Armenian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'mk': 'Macedonian', 'ml': 'Malayalam', 'mr': 'Marathi', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+DEBUG:gtts.tts:pre-processing: <function tone_marks at 0x10d643670>
+DEBUG:gtts.tts:pre-processing: <function end_of_line at 0x10d643f70>
+DEBUG:gtts.tts:pre-processing: <function abbreviations at 0x10d681040>
+DEBUG:gtts.tts:pre-processing: <function word_sub at 0x10d6810d0>
+DEBUG:gtts.tts:text_parts: ['I D S Project 2 point O activated!']
+DEBUG:gtts.tts:text_parts: 1
+DEBUG:gtts.tts:data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22I%20D%20S%20Project%202%20point%20O%20activated%21%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.google.com:443
+DEBUG:urllib3.connectionpool:https://translate.google.com:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/1.1" 200 None
+DEBUG:gtts.tts:headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '180'}
+DEBUG:gtts.tts:url-0: https://translate.google.com/_/TranslateWebserverUi/data/batchexecute
+DEBUG:gtts.tts:status-0: 200
+DEBUG:gtts.tts:part-0 written to <_io.BufferedWriter name='audio.mp3'>
+DEBUG:gtts.tts:Saved to audio.mp3

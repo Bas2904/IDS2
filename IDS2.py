@@ -8,9 +8,9 @@ import requests
 import time
 from pygame import mixer
 import sys
-
 import logging
-logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
+
+logging.basicConfig(filename='Program.log', encoding='utf-8', level=logging.DEBUG)
 
 outfile = open('data.txt', 'w')
 
@@ -65,7 +65,6 @@ def tars(command):
     "if statements for executing commands"
 
     #  weather forecast in your city (e.g. weather in London)
-    # please create and use your own API it is free
     if "weather in" in command:
         city = command.split("in", 1)[1]   
         #openweathermap API
