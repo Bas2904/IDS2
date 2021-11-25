@@ -1,4 +1,33 @@
 I D S Project 2 point O activated!
 I am listening
 analyzing...
+You said: no
+Excuse me?
+I am listening
+analyzing...
+Your last command couldn't be heard
+I am listening
+analyzing...
+You said: hello
+hello
+Hello! I am IDS 2.0. How can I help you?
+I am listening
+analyzing...
+You said: copenhagen is like
+I don't know what you mean
+I am listening
+analyzing...
 You said: weather in copenhagen
+It is 6 degree celcius in  copenhagen
+I am listening
+analyzing...
+You said: what is the time
+11/25/2021 17:57:21
+I am listening
+analyzing...
+You said: are you hungry
+No. I do not eat.
+I am listening
+analyzing...
+You said: goodbye
+Bye Bye
