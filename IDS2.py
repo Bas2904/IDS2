@@ -3,7 +3,6 @@ import speech_recognition as sr
 import time
 import random
 import requests
-import time
 from pygame import mixer
 import sys
 import logging
