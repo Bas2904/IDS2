@@ -19,8 +19,6 @@ logging.basicConfig(filename='Program.log',
 outfile = open('data.txt', 'w')
 
 # Create audio file. This is he bot voice output
-
-
 def talk(audio):
     "speaks audio passed as argument"
     # Creates audio.mp3, and overwrites exsisting file. Plays audio.mp3 for user
