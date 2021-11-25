@@ -124,7 +124,7 @@ def tars(command):
     elif "goodbye" in command:
         talk("Bye Bye")
         outfile.write("Bye Bye" + "\n")
-
+        outfile.close()
         time.sleep(3)
         sys.exit()
 
@@ -133,7 +133,6 @@ def tars(command):
         error = random.choice(errors)
         talk(error)
         outfile.write(error + "\n")
-        outfile.close()
         time.sleep(3)
 
 
